@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ForkliftControlSystem/v17
+/.vs/ForkliftControlSystem
+/ForkliftControlSystem.Application/bin/Debug/net8.0
+/ForkliftControlSystem.API/bin/Debug/net8.0
+/ForkliftControlSystem.API/obj
+
+/ForkliftControlSystem.Application/obj
+/ForkliftControlSystem.Domain/bin/Debug/net8.0
+/ForkliftControlSystem.Domain/obj
+/ForkliftControlSystem.Infrastructure/bin/Debug/net8.0
+/ForkliftControlSystem.Infrastructure/obj
