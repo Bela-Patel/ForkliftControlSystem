@@ -1,0 +1,19 @@
+<div *ngIf="showComp">
+  <form nz-form (ngSubmit)="submitCommand()" [formGroup]="validateForm">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="commands">Enter Forklift Commands:</nz-form-label>
+      <nz-form-control [nzSpan]="14" nzErrorTip="Please input Forklift Commands!">
+        <input nz-input id="commands" 
+        formControlName="command" name="command" placeholder="E.g. F10 R90 B5" />
+      </nz-form-control>
+      <button nz-button nzType="primary" type="submit" [disabled]="!validateForm.valid">Execute</button>
+    </nz-form-item>
+  </form>
+
+  <div *ngIf="commandActions.length > 0" class="action">
+    <h3>Forklift Actions:</h3>
+    <ul>
+      <li *ngFor="let action of commandActions">{{ action }}</li>
+    </ul>
+  </div>
+</div>

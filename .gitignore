@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+node_modules
 /.vs/ForkliftControlSystem/v17
 /.vs/ForkliftControlSystem
 /ForkliftControlSystem.Application/bin/Debug/net8.0

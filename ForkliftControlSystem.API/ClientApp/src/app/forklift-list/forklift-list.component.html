@@ -1,0 +1,37 @@
+<nz-upload
+  [(nzFileList)]="fileList"
+  [nzShowUploadList]="true"
+  [nzMultiple]="false"
+  [nzAccept]="'.csv'"
+  [nzBeforeUpload]="beforeUpload">
+  <button nz-button>
+    <i nz-icon nzType="upload"></i> Click to Upload
+  </button>
+</nz-upload>
+
+<div *ngIf="importSuccess">
+  <p>Import Successful!</p>
+</div>
+<div *ngIf="importError">
+  <p>{{ message }}</p>
+</div>
+
+<!-- Table to display forklift details -->
+<nz-table [nzData]="forklifts" [nzBordered]="true">
+  <thead>
+    <tr>
+      <th nzWidth="25%">Name</th>
+      <th nzWidth="25%">Model Number</th>
+      <th nzWidth="25%">Manufacturing Date</th>
+      <th nzWidth="25%">Age (Years)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forklift of forklifts">
+      <td>{{ forklift.name }}</td>
+      <td>{{ forklift.modelNumber }}</td>
+      <td>{{ forklift.manufacturingDate | date: 'shortDate' }}</td>
+      <td>{{ forklift.age }}</td>
+    </tr>
+  </tbody>
+</nz-table>
